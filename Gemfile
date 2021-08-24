@@ -10,3 +10,12 @@ gemspec
 
 # Load Gemfile with dependencies from manageiq
 eval_gemfile(File.expand_path("spec/manageiq/Gemfile", __dir__))
+
+# github 'kbrock/azure-sdk-for-ruby', branch: 'v2021-smaller' do
+BR='require_relative' # 'v2021-smaller'
+  gem 'azure_mgmt_compute',   github: 'kbrock/azure-sdk-for-ruby', branch: BR, :glob => 'management/azure_mgmt_compute/azure_mgmt_compute.gemspec'
+  gem 'azure_mgmt_monitor',   github: 'kbrock/azure-sdk-for-ruby', branch: BR, :glob => 'management/azure_mgmt_monitor/azure_mgmt_monitor.gemspec'
+  gem 'azure_mgmt_network',   github: 'kbrock/azure-sdk-for-ruby', branch: BR, :glob => 'management/azure_mgmt_network/azure_mgmt_network.gemspec'
+  gem 'azure_mgmt_resources', github: 'kbrock/azure-sdk-for-ruby', branch: BR, :glob => 'management/azure_mgmt_resources/azure_mgmt_resources.gemspec'
+  gem 'ms_rest_azure',        github: 'kbrock/azure-sdk-for-ruby', branch: BR, :glob => 'runtime/ms_rest_azure/ms_rest_azure.gemspec'
+# end
